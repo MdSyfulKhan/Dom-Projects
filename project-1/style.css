@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", Courier, monospace;
+}
+#root {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+h1 {
+  margin-bottom: 20px;
+}
+.change-btn {
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 1px solid green;
+  border-radius: 5px;
+  margin: 0 auto;
+  flex: none;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #fff;
+}
+.btn-click:hover {
+  background-color: cadetblue;
+  color: white;
+  border-color: transparent;
+}

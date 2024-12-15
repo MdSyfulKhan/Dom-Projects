@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", Courier, monospace;
+}
+#root {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+h1 {
+  margin-bottom: 20px;
+}
+.cs-input-copy-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.cs-input-field {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: 20px;
+  height: 100%;
+}
+
+.copy-btn {
+  height: 100%;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #dadada;
+  cursor: pointer;
+}
+
+.change-btn {
+  padding: 10px 30px;
+  border: 1px solid green;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #fff;
+  font-size: 20px;
+}
+.btn-click:hover {
+  background-color: cadetblue;
+  color: white;
+  border-color: transparent;
+}

@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", Courier, monospace;
+}
+body {
+  background-color: #000;
+}
+#root {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #fff;
+}
+.cs-input-copy-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.cs-input-field {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: 20px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.copy-btn {
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.change-btn {
+  padding: 10px 30px;
+  border: 1px solid green;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #fff;
+  font-size: 20px;
+}
+.btn-click:hover {
+  background-color: cadetblue;
+  color: white;
+  border-color: transparent;
+}
+
+.toast-message {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background-color: green;
+  border: 1px solid white;
+  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  box-shadow: rgba(25, 25, 25, 0.8) 0 0 1px 0, rgba(0, 0, 0, 0.5) 0 3px 6px 0;
+}
+
+.toast-message-slide-in {
+  animation: toast-animation-in 0.5s ease-in;
+}
+@keyframes toast-animation-in {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.toast-message-slide-out {
+  animation: toast-animation-out 0.5s ease-in;
+}
+@keyframes toast-animation-out {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}
