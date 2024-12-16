@@ -17,7 +17,7 @@ window.onload = () => {
 function main() {
   const root = document.getElementById("root");
   const changeBtn = document.getElementById("change-btn");
-  const output = document.getElementById("cs-input-field");
+  const output = document.getElementById("cs_display");
   const copyBtn = document.getElementById("copy-btn");
 
   changeBtn.addEventListener("click", () => {

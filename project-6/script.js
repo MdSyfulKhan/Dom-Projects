@@ -5,7 +5,8 @@
  * Add a button to copy the color code
  * Add a toast messege when copy
  * User can type their own hex code too
- *
+ * If hex code valid then it will be copy otherwise throw an error
+ * Input field text will be capitalize
  * **/
 
 // Globals
@@ -18,7 +19,7 @@ window.onload = () => {
 function main() {
   const root = document.getElementById("root");
   const changeBtn = document.getElementById("change-btn");
-  const output = document.getElementById("cs-input-field");
+  const output = document.getElementById("cs_display");
   const copyBtn = document.getElementById("copy-btn");
 
   changeBtn.addEventListener("click", () => {

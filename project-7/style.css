@@ -16,31 +16,77 @@ body {
   text-align: center;
 }
 
+.cs_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cs_mb_15 {
+  margin-bottom: 15px;
+}
+.cs_mb_30 {
+  margin-bottom: 30px;
+}
+.cs_color_white {
+  color: #fff;
+}
+.cs_color_black {
+  color: #000;
+}
+.cs_bg_white {
+  background-color: #fff;
+}
+.cs_bg_black {
+  background-color: #000;
+}
+
 h1 {
   margin-bottom: 20px;
   text-shadow: 2px 2px #fff;
 }
-.cs-input-copy-wrapper {
+
+.cs_title_h4 {
+  flex: 1;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.cs-input-group {
   display: flex;
   justify-content: center;
   gap: 10px;
   height: 50px;
-  margin-bottom: 15px;
+  position: relative;
+  width: max-content;
+  box-shadow: 0 8px 20px 0 rgba(75, 75, 75, 0.8);
+}
+.cs_hex_icon {
+  height: 100%;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  background-color: rgb(75, 75, 75);
+  border-radius: 5px 0 0 5px;
 }
 
 .cs_display {
   padding: 10px;
+  padding-left: 55px;
   border-radius: 5px;
   border: 1px solid grey;
   font-size: 20px;
   height: 100%;
   background-color: #fff;
 }
+.cs_display.rgba {
+  padding-left: 15px;
+}
 
 .copy-btn {
   height: 100%;
   border-radius: 5px;
-  border: none;
+  border: 1px solid gray;
   padding: 10px 20px;
   font-size: 18px;
   background-color: #fff;

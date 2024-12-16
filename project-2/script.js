@@ -12,7 +12,7 @@ window.onload = () => {
 function main() {
   const root = document.getElementById("root");
   const changeBtn = document.getElementById("change-btn");
-  const input = document.getElementById("cs-input-field");
+  const input = document.getElementById("cs_display");
 
   changeBtn.addEventListener("click", () => {
     const bgColor = generateHEXColor();

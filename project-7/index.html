@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change The Background Color</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container" id="root">
+      <div>
+        <h1>Change the Background Color By Clicking The Following Button</h1>
+        <div class="cs_center cs_mb_30">
+          <div>
+            <h4 class="cs_title_h4">HEX code</h4>
+            <div class="cs-input-group cs_mb_15">
+              <div class="cs_hex_icon cs_center cs_color_white">#</div>
+              <input
+                class="cs_display"
+                id="cs_display"
+                type="text"
+                value="000000"
+              />
+              <button class="copy-btn" id="copy-btn">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="cs_center cs_mb_30">
+          <div>
+            <h4 class="cs_title_h4">RGB code</h4>
+            <div class="cs-input-group cs_mb_15">
+              <input
+                class="cs_display rgba"
+                id="cs_display2"
+                type="text"
+                value="rgba(0,0,0)"
+                disabled
+              />
+              <button class="copy-btn" id="copy-btn-2">Copy</button>
+            </div>
+          </div>
+        </div>
+        <button class="change-btn" id="change-btn">Change Color</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

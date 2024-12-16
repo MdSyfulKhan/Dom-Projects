@@ -5,7 +5,10 @@
  * Add a button to copy the color code
  * Add a toast messege when copy
  * User can type their own hex code too
- * 
+ * If hex code valid then it will be copy otherwise throw an error
+ * Input field text will be capitalize
+ * Show rgb color too, but do not need to edit it
+ * User also copy rgb color
  * **/
 
 // Globals
@@ -19,17 +22,19 @@ function main() {
   const root = document.getElementById("root");
   const changeBtn = document.getElementById("change-btn");
   const output = document.getElementById("cs_display");
+  const output2 = document.getElementById("cs_display2");
   const copyBtn = document.getElementById("copy-btn");
 
   changeBtn.addEventListener("click", () => {
-    const bgColor = generateHEXColor();
-    output.value = bgColor;
-    root.style.backgroundColor = bgColor;
+    const colorDecimale = generateColorDecimale();
+    const hex = generateHEXColor(colorDecimale);
+    const rgb = generateRGBColor(colorDecimale);
+    output.value = hex.substring(1);
+    output2.value = rgb;
+    root.style.backgroundColor = hex;
   });
 
   copyBtn.addEventListener("click", () => {
-    navigator.clipboard.writeText(output.value);
-
     // toastDiv will be empty when click
     if (toastDiv !== null) {
       toastDiv.remove();
@@ -37,29 +42,46 @@ function main() {
     }
 
     if (isValidHax(output.value)) {
-      generateToastMessage(`${output.value} Copied`);
-      navigator.clipboard.writeText(output.value);
+      generateToastMessage(`#${output.value} Copied`);
+      navigator.clipboard.writeText(`${output.value}`);
     } else {
       alert("Invalid color");
     }
   });
 
   output.addEventListener("keyup", (e) => {
-    const bgColor = e.target.value;
-    if (bgColor && isValidHax(bgColor)) {
-      root.style.backgroundColor = bgColor;
+    const color = e.target.value;
+    if (color) {
+      output.value = color.toUpperCase();
+      if (isValidHax(color)) {
+        root.style.backgroundColor = `#${color}`;
+      }
     }
   });
 }
 
-const generateHEXColor = () => {
+const generateColorDecimale = () => {
   const red = Math.floor(Math.random() * 255);
   const green = Math.floor(Math.random() * 255);
   const blue = Math.floor(Math.random() * 255);
-  const hexColor = `#${red.toString(16)}${green.toString(16)}${blue.toString(
-    16
-  )}`;
+  return {
+    red,
+    green,
+    blue,
+  };
+};
+
+const generateHEXColor = ({ red, green, blue }) => {
+  const getTwoColor = (value) =>{
+    const hex = value.toString(16);
+    return hex.length == 1 ? `0${hex}` : hex;
+  }
+  const hexColor = `#${getTwoColor(red)}${getTwoColor(green)}${getTwoColor(blue)}`.toUpperCase();
   return hexColor;
+};
+
+const generateRGBColor = ({ red, green, blue }) => {
+  return `rgb(${red}, ${green} ,${blue})`;
 };
 
 const generateToastMessage = (msg) => {
@@ -87,10 +109,7 @@ const generateToastMessage = (msg) => {
  */
 
 const isValidHax = (color) => {
-  if (color.length !== 7) return false;
-  if (color[0] !== "#") return false;
-
-  color = color.substring(1);
+  if (color.length !== 6) return false;
   return /^[0-9A-Fa-f]{6}$/i.test(color);
 };
 
@@ -105,4 +124,9 @@ const isValidHax = (color) => {
 // step 9 - create isValidHax function #Done
 // step 10 - implement change handler on input field #Done
 // step 11 - code will be copy when hex code will be valid #Done
-// step # -
+// step 12 - Refactor the color generator function
+// step 13 - Update color code to display rgb colors
+// step 12 -
+// step 12 -
+// step 12 -
+// step 12 -
