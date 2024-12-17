@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change The Background Color</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="root" id="root">
+      <div class="cs_app_body cs_radius_10">
+        <div class="cs_display_wrapper">
+          <div
+            class="cs_section_top cs_flex cs_align_center cs_justify_between cs_b_b_1 cs_pb_10"
+          >
+            <h3 class="cs_heading">Display Color</h3>
+            <button class="cs_color_text" id="generateRandomColor">
+              Random color
+            </button>
+          </div>
+          <div id="cs_display" class="cs_display cs_radius_5"></div>
+        </div>
+        <div class="cs_change_and_copy_wrapper">
+          <div
+            class="cs_section_top cs_flex cs_align_center cs_justify_between cs_b_b_1 cs_pb_10"
+          >
+            <h3 class="cs_heading">Change & Copy Color</h3>
+            <button class="cs_color_text">Copy To Clipboard</button>
+          </div>
+          <div class="cs_copy_mode cs_flex cs_justify_between cs_align_center">
+            <div class="cs_copy_mode_heading">Select copy mode</div>
+            <div class="cs_input_radio_wrapper cs_flex cs_align_center">
+              <div class="cs_input_group_radio">
+                <input type="radio" id="hexCopyBtn" name="color" id="hex" />
+                <label for="hex">hex</label>
+              </div>
+              <div class="cs_input_group_radio">
+                <input type="radio" id="rgbCopyBtn" name="color" id="rgba" />
+                <label for="rgba">rgb</label>
+              </div>
+            </div>
+          </div>
+          <div class="cs_form_group_wrapper">
+            <div class="cs_form_group">
+              <label for="">Hex</label>
+              <div class="cs_input_group cs_hex">
+                <label class="cs_slash">#</label>
+                <input type="text" id="hexInput" />
+              </div>
+            </div>
+            <div class="cs_form_group">
+              <label for="">Rgb</label>
+              <div class="cs_input_group">
+                <input type="text" id="rgbInput" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cs_adjust_rgb_color_wrapper">
+          <h3 class="cs_heading_rgb_range_input">Adjust RGB Colors</h3>
+          <div class="cs_rgb_group_wrapper">
+            <div class="cs_rgb_wrapper">
+              <div class="cs_rgb_label_wrap">
+                <label>Red</label>
+                <span id="redInputSliderLabel">255</span>
+              </div>
+              <input
+                type="range"
+                id="redInputSlider"
+                min="0"
+                max="255"
+                value="0"
+              />
+            </div>
+            <div class="cs_rgb_wrapper">
+              <div class="cs_rgb_label_wrap">
+                <label>Green</label>
+                <span id="greenInputSliderLabel">0</span>
+              </div>
+              <input
+                type="range"
+                id="greenInputSlider"
+                min="0"
+                max="255"
+                value="0"
+              />
+            </div>
+            <div class="cs_rgb_wrapper">
+              <div class="cs_rgb_label_wrap">
+                <label>Blue</label>
+                <span id="blueInputSliderLabel">0</span>
+              </div>
+              <input
+                type="range"
+                id="blueInputSlider"
+                min="0"
+                max="255"
+                value="0"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
